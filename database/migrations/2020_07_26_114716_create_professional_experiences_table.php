@@ -14,7 +14,7 @@ class CreateProfessionalExperiencesTable extends Migration
     public function up()
     {
         Schema::connection('pgsql-bolsa_empleo')->create('professional_experiences', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->foreignId('professional_id')->constrained('professionals');
             $table->string('employer');
             $table->string('position');

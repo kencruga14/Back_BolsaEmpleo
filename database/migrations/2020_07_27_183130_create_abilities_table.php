@@ -14,7 +14,8 @@ class CreateAbilitiesTable extends Migration
     public function up()
     {
             Schema::connection('pgsql-bolsa_empleo')->create('abilities', function (Blueprint $table) {
-            $table->id();
+            $table->integer('id');
+            $table->foreignId('prefessional_id')->constrained('professionals');
             $table->string('category', 50);
             $table->string('description', 100);
             $table->string('state')->default('ACTIVE');

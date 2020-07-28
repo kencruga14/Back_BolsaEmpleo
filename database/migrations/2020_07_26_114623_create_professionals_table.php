@@ -15,7 +15,7 @@ class CreateProfessionalsTable extends Migration
     {
         Schema::connection('pgsql-bolsa_empleo')->create('professionals', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('user_id')->constrained('authentication.users');
+            $table->foreignId('user_id')->constrained('authentication.users');
             $table->string('identity');
             $table->string('email');
             $table->string('first_name');

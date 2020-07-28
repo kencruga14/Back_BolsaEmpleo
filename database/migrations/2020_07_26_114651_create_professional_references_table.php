@@ -14,7 +14,8 @@ class CreateProfessionalReferencesTable extends Migration
     public function up()
     {
         Schema::connection('pgsql-bolsa_empleo')->create('profesional_references', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->foreignId('prefessional_id')->constrained('professionals');
             $table->string('institution',50);
             $table->string('position',50);
             $table->string('contact',50);

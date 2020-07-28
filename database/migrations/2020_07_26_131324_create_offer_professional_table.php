@@ -14,7 +14,7 @@ class CreateOfferProfessionalTable extends Migration
     public function up()
     {
         Schema::connection('pgsql-bolsa_empleo')->create('offer_professional', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->foreignId('offer_id')->constrained('offers');
             $table->foreignId('professional_id')->constrained('professionals');
             $table->string('state')->default('ACTIVE');

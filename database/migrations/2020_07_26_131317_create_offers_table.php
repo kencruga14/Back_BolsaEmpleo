@@ -14,7 +14,7 @@ class CreateOffersTable extends Migration
     public function up()
     {
         Schema::connection('pgsql-bolsa_empleo')->create('offers', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->foreignId('company_id')->constrained('companies');
             $table->string('code');
             $table->string('contact');
