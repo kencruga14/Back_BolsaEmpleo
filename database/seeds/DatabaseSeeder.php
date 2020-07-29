@@ -499,54 +499,62 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-       // factory(App\User::class, 100)->create();
+    //    // factory(App\User::class, 100)->create();
 
 
-       // Users
-       factory(App\User::class)->create([
-        'identification' =>'1722080456',
-        'postal_code' =>'45321',
-        'first_name' =>'Alex',
-        'second_name' =>'Patricio',
-        'first_lastname'=>'Mejia',
-        'second_lastname' =>'Arias',
-        'personal_email' =>'alexfull13@gmail.com',
-        'birthdate' =>'2020/12/12',
-        'user_name' =>'AlexCrack',
-        'email' =>'alexfuli@gmail.com',
-        'email_verified_at'=>null,
-        'password' =>'12345',
-        'ethnic_origin_id'=>1,
-        'location_id'=>1,
-        'identification_type_id'=>1,
-        'sex_id'=>1,
-        'gender_id'=>1,
-        'blood_type_id'=>1,
-        'state_id'=>1,
+    //    // Users
+    //    factory(App\User::class)->create([
+    //     'identification' =>'1722080456',
+    //     'postal_code' =>'45321',
+    //     'first_name' =>'Alex',
+    //     'second_name' =>'Patricio',
+    //     'first_lastname'=>'Mejia',
+    //     'second_lastname' =>'Arias',
+    //     'personal_email' =>'alexfull13@gmail.com',
+    //     'birthdate' =>'2020/12/12',
+    //     'user_name' =>'AlexCrack',
+    //     'email' =>'alexfuli@gmail.com',
+    //     'email_verified_at'=>null,
+    //     'password' =>'12345',
+    //     'ethnic_origin_id'=>1,
+    //     'location_id'=>1,
+    //     'identification_type_id'=>1,
+    //     'sex_id'=>1,
+    //     'gender_id'=>1,
+    //     'blood_type_id'=>1,
+    //     'state_id'=>1,
 
-    ]);
+    // ]);
 
-    factory(App\User::class)->create([
-        'identification' =>'1740565843',
-        'postal_code' =>'444',
-        'first_name' =>'Ana',
-        'second_name' =>'Gabriel',
-        'first_lastname'=>'Gabriel',
-        'second_lastname' =>'Gabriel',
-        'personal_email' =>'Gabriel@gmail.com',
-        'birthdate' =>'2020/12/12',
-        'user_name' =>'Gabriel',
-        'email' =>'Gabriel@gmail.com',
-        'email_verified_at'=>null,
-        'password' =>'12334',
-        'ethnic_origin_id'=>1,
-        'location_id'=>1,
-        'identification_type_id'=>1,
-        'sex_id'=>1,
-        'gender_id'=>1,
-        'blood_type_id'=>1,
-        'state_id'=>1,
+    // factory(App\User::class)->create([
+    //     'identification' =>'1726850660',
+    //     'postal_code' =>'170105',
+    //     'first_name' =>'Armando',
+    //     'second_name' =>'Telmo',
+    //     'first_lastname'=>'Cajilema',
+    //     'second_lastname' =>'Cuji',
+    //     'personal_email' =>'armandotcajilema@gmail.com',
+    //     'birthdate' =>'2020/08/21',
+    //     'user_name' =>'Pachuka',
+    //     'email' =>'atc.cajilema@yavirac.edu.ec',
+    //     'email_verified_at'=>null,
+    //     'password' =>'12345',
+    //     'ethnic_origin_id'=>1,
+    //     'location_id'=>1,
+    //     'identification_type_id'=>1,
+    //     'sex_id'=>1,
+    //     'gender_id'=>1,
+    //     'blood_type_id'=>1,
+    //     'state_id'=>1,
 
-    ]);
+    // ]);
+
+    $this->call(UserSeeder::class);
+    $this->call(ProfessionalSeeder::class);
+    $this->call(CompanySeeder::class);
+    $this->call(OfferSeeder::class);
+    $this->call(Professional_referencesSeeder::class);
+    $this->call(Professional_experiencesSeeder::class);
+    $this->call(Offer_professionalSeeder::class);
     }
 }

@@ -24,7 +24,7 @@ class ProfessionalReference extends Model
         'state',
     ];
 
-    public function profsesional()
+    public function profssesional()
     {
         return $this->belongsTo('App\Professional');
     }

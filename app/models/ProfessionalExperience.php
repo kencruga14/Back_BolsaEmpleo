@@ -2,13 +2,14 @@
 
 namespace App;
 
+use App\Models\State;
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
 
 class ProfessionalExperience extends Model
 {
-    use App\Models\State;
-    use Illuminate\Database\Eloquent\Model;
-    use OwenIt\Auditing\Contracts\Auditable;
+   
+    use \OwenIt\Auditing\Auditable;
     
     /**
      * The attributes that are mass assignable.

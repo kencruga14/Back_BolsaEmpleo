@@ -1,10 +1,8 @@
 <?php
 
-
-use App\Professional;
 use Illuminate\Database\Seeder;
 
-class ProfesionalsTableSeeder extends Seeder
+class Offer_professionalSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +11,6 @@ class ProfesionalsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Professional::class, 20)->create();
+        factory(App\Offer_professional::class, 100)->create();
     }
 }
